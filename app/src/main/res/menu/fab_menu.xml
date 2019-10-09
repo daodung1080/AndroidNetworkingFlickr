@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fab_back"
+        android:icon="@drawable/back"
+        android:title="Back" />
+
+    <item
+        android:id="@+id/fab_download"
+        android:icon="@android:drawable/stat_sys_download"
+        android:title="Download" />
+
+</menu>

@@ -115,6 +115,10 @@ public class PhotoDetailActivity extends BaseActivity implements View.OnClickLis
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         getMenuInflater().inflate(R.menu.download_menu, menu);
+        Photo photo = photoList.get(svPhoto.getCurrentPagePosition());
+        menu.findItem(R.id.downloadLow).setTitle("Download lowest quality ("+photo.getWidthS()+" X "+photo.getHeightS()+")");
+        menu.findItem(R.id.downloadMedium).setTitle("Download medium quality ("+photo.getWidthM()+" X "+photo.getHeightM()+")");
+        menu.findItem(R.id.downloadBest).setTitle("Download highest quality ("+photo.getWidthL()+" X "+photo.getHeightL()+")");
     }
 
     @Override

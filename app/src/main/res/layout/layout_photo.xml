@@ -5,10 +5,11 @@
     app:cardCornerRadius="4dp"
     android:layout_margin="4dp">
 
-    <android.support.constraint.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/parentContsraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/imgPhoto"
@@ -20,8 +21,40 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" >
-
         </ImageView>
 
-    </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/llPhotoShow"
+            android:visibility="gone"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignBottom="@id/imgPhoto"
+            android:orientation="horizontal"
+            android:background="#6B0C0C0C">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/eye">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/tvPhotoView"
+                android:layout_marginLeft="7dp"
+                android:text="200.000 Views"
+                android:textColor="#FFFFFF">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
